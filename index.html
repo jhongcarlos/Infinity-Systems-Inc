@@ -11,15 +11,8 @@
     <!-- Font preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Load Google Fonts async to eliminate render-blocking + use optional to prevent CLS -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=optional" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=optional" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=optional" /></noscript>
-
-    <!-- Font Awesome loaded async — non-render-blocking -->
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" /></noscript>
+    <!-- display=optional: no font-swap, no CLS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=optional" />
 
     <!-- Image CDN preconnect -->
     <link rel="preconnect" href="https://www.infinity-tx.com" crossorigin />

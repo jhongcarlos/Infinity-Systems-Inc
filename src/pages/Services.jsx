@@ -1,7 +1,9 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import useAnimate from '../hooks/useAnimate'
 
 export default function Services() {
+  useEffect(() => { document.title = 'Services | Infinity Systems Inc' }, [])
   useAnimate()
   return (
     <div style={{ paddingTop: 'var(--nav-h)' }}>

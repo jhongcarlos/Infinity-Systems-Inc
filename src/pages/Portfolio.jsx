@@ -27,6 +27,7 @@ const IMAGES = [
 ]
 
 export default function Portfolio() {
+  useEffect(() => { document.title = 'Portfolio | Infinity Systems Inc' }, [])
   useAnimate()
   const [lightbox, setLightbox] = useState(null)
 

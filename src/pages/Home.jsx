@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import useAnimate from '../hooks/useAnimate'
 
@@ -14,6 +15,7 @@ const IMG = {
 }
 
 export default function Home() {
+  useEffect(() => { document.title = 'Infinity Systems Inc | Mechanical Contracting Solutions in Texas' }, [])
   useAnimate()
 
   return (
