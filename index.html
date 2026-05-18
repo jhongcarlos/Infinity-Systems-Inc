@@ -11,8 +11,10 @@
     <!-- Font preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- display=optional: no font-swap, no CLS -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=optional" />
+    <!-- Fonts async: no render-blocking, display=optional prevents CLS -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700;800;900&family=Poppins:wght@400;500;600&display=optional" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700;800;900&family=Poppins:wght@400;500;600&display=optional" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700;800;900&family=Poppins:wght@400;500;600&display=optional" /></noscript>
 
     <!-- Image CDN preconnect -->
     <link rel="preconnect" href="https://www.infinity-tx.com" crossorigin />
