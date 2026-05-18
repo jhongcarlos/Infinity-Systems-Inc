@@ -650,7 +650,7 @@ p, li, label, input, textarea, select, button {
 }
 .footer-contact a { color: rgba(255,255,255,0.6); transition: color 0.2s; }
 .footer-contact a:hover { color: var(--primary); }
-.footer-contact .ico { color: var(--primary); font-size: 17px; flex-shrink: 0; margin-top: 1px; }
+.footer-contact .ico { color: var(--primary); flex-shrink: 0; margin-top: 3px; display: flex; }
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding: 22px 0;

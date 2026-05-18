@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, memo } from 'react'
 import { Link } from 'react-router-dom'
 
 const IMAGES = [
@@ -24,6 +24,32 @@ const IMAGES = [
   'https://infinity-tx.com/wp-content/uploads/2025/06/DSC_3339-G.jpg',
   'https://infinity-tx.com/wp-content/uploads/2025/06/DSC_3472-G-1.jpg',
 ]
+
+const PortfolioItem = memo(function PortfolioItem({ src, index, total, onOpen }) {
+  const handleKey = useCallback(e => {
+    if (e.key === 'Enter') onOpen(src)
+  }, [src, onOpen])
+
+  return (
+    <div
+      className="portfolio-item"
+      role="listitem"
+      onClick={() => onOpen(src)}
+      onKeyDown={handleKey}
+      tabIndex={0}
+      aria-label={`View project photo ${index + 1} of ${total}`}
+    >
+      <img
+        src={src}
+        alt={`Mechanical contracting project ${index + 1}`}
+        width="400"
+        height="300"
+        loading={index < 6 ? 'eager' : 'lazy'}
+        decoding="async"
+      />
+    </div>
+  )
+})
 
 export default function Portfolio() {
   useEffect(() => { document.title = 'Portfolio | Infinity Systems Inc' }, [])
@@ -64,24 +90,13 @@ export default function Portfolio() {
       <div className="container">
         <div className="portfolio-grid" role="list">
           {IMAGES.map((src, i) => (
-            <div
+            <PortfolioItem
               key={src}
-              className="portfolio-item"
-              role="listitem"
-              onClick={() => setLightbox(src)}
-              onKeyDown={e => e.key === 'Enter' && setLightbox(src)}
-              tabIndex={0}
-              aria-label={`View project photo ${i + 1} of ${IMAGES.length}`}
-            >
-              <img
-                src={src}
-                alt={`Mechanical contracting project ${i + 1}`}
-                width="400"
-                height="300"
-                loading={i < 6 ? 'eager' : 'lazy'}
-                decoding="async"
-              />
-            </div>
+              src={src}
+              index={i}
+              total={IMAGES.length}
+              onOpen={setLightbox}
+            />
           ))}
         </div>
       </div>

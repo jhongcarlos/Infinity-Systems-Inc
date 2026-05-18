@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const EMPTY = { name: '', email: '', phone: '', billingAddress: '', requestedBy: '', serviceLocation: '', locationContact: '', message: '' }
@@ -10,12 +10,12 @@ export default function RequestService() {
   useEffect(() => { document.title = 'Request Service | Infinity Systems Inc' }, [])
   const navigate = useNavigate()
 
-  const handleChange = e => {
+  const handleChange = useCallback(e => {
     const { name, value } = e.target
     setForm(prev => ({ ...prev, [name]: value }))
-  }
+  }, [])
 
-  const handleSubmit = async e => {
+  const handleSubmit = useCallback(async e => {
     e.preventDefault()
     setLoading(true)
     setStatus(null)
@@ -35,7 +35,7 @@ export default function RequestService() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [navigate])
 
   return (
     <div style={{ paddingTop: 'var(--nav-h)' }}>
