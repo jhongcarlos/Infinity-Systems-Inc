@@ -1,15 +1,15 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import useAnimate from '../hooks/useAnimate'
 
 export default function ThankYou() {
-  useAnimate()
+  useEffect(() => { document.title = 'Thank You | Infinity Systems Inc' }, [])
   return (
     <div style={{ paddingTop: 'var(--nav-h)' }}>
       <section className="thankyou-page">
         <div className="container">
-          <div className="thankyou-inner" data-animate>
+          <div className="thankyou-inner">
             <div className="thankyou-icon" aria-hidden="true">
-              <i className="fa-solid fa-circle-check" />
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="48" height="48"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
             </div>
             <span className="section-label">Form Submitted</span>
             <h1>Thank You!</h1>

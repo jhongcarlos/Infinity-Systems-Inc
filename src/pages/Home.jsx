@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import useAnimate from '../hooks/useAnimate'
 
 const IMG = {
   hero:          'https://www.infinity-tx.com/wp-content/uploads/2025/06/DSC_3500-G.jpg',
@@ -16,7 +15,6 @@ const IMG = {
 
 export default function Home() {
   useEffect(() => { document.title = 'Infinity Systems Inc | Mechanical Contracting Solutions in Texas' }, [])
-  useAnimate()
 
   return (
     <>
@@ -35,11 +33,11 @@ export default function Home() {
           />
           <div className="hero-overlay" aria-hidden="true" />
           <div className="hero-content">
-            <h1 className="hero-title" data-animate="fade">Precision, Innovation, Reliability</h1>
-            <p className="hero-desc" data-animate="fade" data-delay="1">
+            <h1 className="hero-title">Precision, Innovation, Reliability</h1>
+            <p className="hero-desc">
               Delivering cutting-edge mechanical contracting solutions across Texas. From design to construction and maintenance, we deliver efficient, high-quality results in every project.
             </p>
-            <Link to="/request-service" className="btn-hero" data-animate="fade" data-delay="2">Request Service</Link>
+            <Link to="/request-service" className="btn-hero">Request Service</Link>
           </div>
         </div>
         <div className="hero-since-band">
@@ -52,7 +50,7 @@ export default function Home() {
       <section className="section" aria-labelledby="about-heading">
         <div className="container">
           <div className="about-grid">
-            <div data-animate="left">
+            <div>
               <span className="section-label">Who We Are</span>
               <h2 id="about-heading" className="section-title">Your Trusted Partner in Mechanical Contracting</h2>
               <p className="section-text">
@@ -65,7 +63,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="about-img-grid" aria-hidden="true" data-animate="right">
+            <div className="about-img-grid" aria-hidden="true">
               <img src={IMG.about1} alt="Infinity Systems project" width="600" height="338" loading="lazy" decoding="async" />
               <div className="about-img-row">
                 <img src={IMG.about2} alt="Mechanical system installation" width="290" height="200" loading="lazy" decoding="async" />
@@ -79,7 +77,7 @@ export default function Home() {
       {/* ── OUR MISSION ── */}
       <section className="mission-section" aria-labelledby="mission-heading">
         <div className="container">
-          <div className="mission-inner" data-animate>
+          <div className="mission-inner">
             <span className="section-label">Our Mission</span>
             <h2 id="mission-heading" className="section-title">Building Trust with Every Project</h2>
             <p className="section-text">
@@ -93,9 +91,9 @@ export default function Home() {
       {/* ── CORE VALUES ── */}
       <section className="section section-alt" aria-labelledby="values-heading">
         <div className="container text-center">
-          <span className="section-label" data-animate>Our Core Values</span>
-          <h2 id="values-heading" className="section-title" data-animate>Guiding Principles That Drive Our Success</h2>
-          <p className="section-text" data-animate>
+          <span className="section-label">Our Core Values</span>
+          <h2 id="values-heading" className="section-title">Guiding Principles That Drive Our Success</h2>
+          <p className="section-text">
             Our core values shape everything we do — transparency, integrity, innovation, and reliability. We deliver exceptional results while building strong partnerships rooted in trust and collaboration. These values are reflected in the professionalism and dedication behind every project.
           </p>
           <div className="values-grid">
@@ -105,7 +103,7 @@ export default function Home() {
               { img: 'https://infinity-tx.com/wp-content/uploads/2025/01/secure-shield-1.png',   title: 'Reliability',   desc: 'Meeting deadlines & exceeding expectations with dependable service.' },
               { img: 'https://www.infinity-tx.com/wp-content/uploads/2026/05/collaborate.png',   title: 'Collaboration', desc: 'Working together to achieve project success.' },
             ].map((v, i) => (
-              <div key={v.title} className="value-card" data-animate data-delay={i + 1}>
+              <div key={v.title} className="value-card" data-delay={i + 1}>
                 <img src={v.img} alt={v.title} width="50" height="50" loading="lazy" decoding="async" />
                 <h3>{v.title}</h3>
                 <p>{v.desc}</p>
@@ -117,7 +115,7 @@ export default function Home() {
 
       {/* ── CTA BAND ── */}
       <section className="cta-band" aria-labelledby="cta-heading">
-        <div className="container" data-animate>
+        <div className="container">
           <span className="section-label">Get Started</span>
           <h2 id="cta-heading" className="section-title">Let's Bring Your Project to Life</h2>
           <p className="section-subtitle">Get in Touch with Our Experts Today</p>
@@ -131,7 +129,7 @@ export default function Home() {
       {/* ── SERVICES PREVIEW ── */}
       <section className="section" aria-labelledby="services-heading">
         <div className="container">
-          <div className="text-center" data-animate>
+          <div className="text-center">
             <span className="section-label">Our Services</span>
             <h2 id="services-heading" className="section-title">Innovative Solutions for Projects of All Sizes</h2>
             <p className="section-text">
@@ -139,7 +137,7 @@ export default function Home() {
             </p>
           </div>
           <div className="services-grid">
-            <article className="service-card" data-animate="left">
+            <article className="service-card">
               <img
                 src={IMG.service1}
                 alt="New Construction and Renovation Services"
@@ -157,7 +155,7 @@ export default function Home() {
                 <Link to="/services" className="learn-more">Learn More</Link>
               </div>
             </article>
-            <article className="service-card" data-animate="right">
+            <article className="service-card">
               <img
                 src={IMG.service2}
                 alt="System Maintenance and Repairs"
@@ -176,7 +174,7 @@ export default function Home() {
               </div>
             </article>
           </div>
-          <div className="services-cta-note" data-animate>
+          <div className="services-cta-note">
             <p>Discover how our expert services can elevate your project — <strong>Explore all we offer today!</strong></p>
             <Link to="/services" className="btn btn-primary">Explore All Services</Link>
           </div>
@@ -186,9 +184,9 @@ export default function Home() {
       {/* ── WHY CHOOSE ── */}
       <section className="section section-alt" aria-labelledby="why-heading">
         <div className="container text-center">
-          <span className="section-label" data-animate>Why Choose Infinity Systems?</span>
-          <h2 id="why-heading" className="section-title" data-animate>Dependability You Can Trust, Results You Can Rely On</h2>
-          <p className="section-text" data-animate>
+          <span className="section-label">Why Choose Infinity Systems?</span>
+          <h2 id="why-heading" className="section-title">Dependability You Can Trust, Results You Can Rely On</h2>
+          <p className="section-text">
             With a proven track record of innovation, precision, and reliability, we deliver mechanical contracting solutions that exceed expectations. Partner with us for unmatched expertise and a commitment to quality.
           </p>
           <div className="features-grid">
@@ -197,7 +195,7 @@ export default function Home() {
               { img: IMG.creativity, alt: 'Solutions',  title: 'Customized Solutions',      desc: 'Tailored services to meet your unique project needs.' },
               { img: IMG.quality,    alt: 'Quality',    title: 'Quality & Reliability',     desc: 'Commitment to excellence at every stage of your project.' },
             ].map((f, i) => (
-              <div key={f.title} className="feature-item" data-animate data-delay={i + 1}>
+              <div key={f.title} className="feature-item" data-delay={i + 1}>
                 <img src={f.img} alt={f.alt} width="52" height="52" loading="lazy" decoding="async" />
                 <h3>{f.title}</h3>
                 <p>{f.desc}</p>

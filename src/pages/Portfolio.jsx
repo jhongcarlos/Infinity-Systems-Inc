@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
-import useAnimate from '../hooks/useAnimate'
 
 const IMAGES = [
   'https://infinity-tx.com/wp-content/uploads/2025/06/DSC_3346-G.jpg',
@@ -28,9 +27,7 @@ const IMAGES = [
 
 export default function Portfolio() {
   useEffect(() => { document.title = 'Portfolio | Infinity Systems Inc' }, [])
-  useAnimate()
   const [lightbox, setLightbox] = useState(null)
-
   const close = useCallback(() => setLightbox(null), [])
 
   useEffect(() => {
@@ -46,16 +43,14 @@ export default function Portfolio() {
 
   return (
     <div style={{ paddingTop: 'var(--nav-h)' }}>
-      {/* ── PAGE HERO ── */}
       <header className="page-hero">
-        <span className="page-hero-label" data-animate>Our Work</span>
-        <h1 data-animate>Portfolio</h1>
+        <span className="page-hero-label">Our Work</span>
+        <h1>Portfolio</h1>
         <p>
           Explore our portfolio showcasing innovative mechanical contracting projects across Texas. See how we deliver quality and excellence in every solution.
         </p>
       </header>
 
-      {/* ── INTRO ── */}
       <section className="portfolio-intro" aria-labelledby="portfolio-heading">
         <div className="container">
           <h2 id="portfolio-heading" className="section-title">Showcasing Excellence in Mechanical Contracting</h2>
@@ -66,14 +61,12 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ── GALLERY ── */}
       <div className="container">
         <div className="portfolio-grid" role="list">
           {IMAGES.map((src, i) => (
             <div
               key={src}
               className="portfolio-item"
-              data-animate
               role="listitem"
               onClick={() => setLightbox(src)}
               onKeyDown={e => e.key === 'Enter' && setLightbox(src)}
@@ -93,7 +86,6 @@ export default function Portfolio() {
         </div>
       </div>
 
-      {/* ── LIGHTBOX ── */}
       {lightbox && (
         <div
           className="lightbox"
@@ -102,14 +94,8 @@ export default function Portfolio() {
           aria-modal="true"
           aria-label="Project photo lightbox"
         >
-          <img
-            src={lightbox}
-            alt="Project detail view"
-            onClick={e => e.stopPropagation()}
-          />
-          <button className="lightbox-close" onClick={close} aria-label="Close lightbox">
-            ×
-          </button>
+          <img src={lightbox} alt="Project detail view" onClick={e => e.stopPropagation()} />
+          <button className="lightbox-close" onClick={close} aria-label="Close lightbox">×</button>
         </div>
       )}
     </div>

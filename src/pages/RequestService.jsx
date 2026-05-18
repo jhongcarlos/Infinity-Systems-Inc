@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import useAnimate from '../hooks/useAnimate'
 
 const EMPTY = { name: '', email: '', phone: '', billingAddress: '', requestedBy: '', serviceLocation: '', locationContact: '', message: '' }
 
@@ -10,7 +9,6 @@ export default function RequestService() {
   const [loading, setLoading] = useState(false)
   useEffect(() => { document.title = 'Request Service | Infinity Systems Inc' }, [])
   const navigate = useNavigate()
-  useAnimate()
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -43,8 +41,8 @@ export default function RequestService() {
     <div style={{ paddingTop: 'var(--nav-h)' }}>
       {/* ── PAGE HERO ── */}
       <header className="page-hero">
-        <span className="page-hero-label" data-animate>Get In Touch</span>
-        <h1 data-animate>Request Service</h1>
+        <span className="page-hero-label">Get In Touch</span>
+        <h1>Request Service</h1>
         <p>
           Request expert mechanical contracting services tailored to your project — efficient, reliable, and built to last.
         </p>
@@ -56,7 +54,7 @@ export default function RequestService() {
           <div className="request-grid">
 
             {/* Info column */}
-            <div className="request-info" data-animate="left">
+            <div className="request-info">
               <h2 id="request-heading">Your Next Project Starts Here</h2>
               <p>
                 Whether you're ready to start your project or have questions about our services, we're here to help. Fill out the service request form or reach out directly using the contact information below.
@@ -109,7 +107,7 @@ export default function RequestService() {
             </div>
 
             {/* Form column */}
-            <div className="form-card" data-animate="right">
+            <div className="form-card">
               <h2>Send a Service Request</h2>
 
               {status === 'success' && (
