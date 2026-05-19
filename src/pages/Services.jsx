@@ -17,7 +17,7 @@ export default function Services() {
         <div className="container">
           <div className="service-full-grid">
             <img
-              src="/images/architecture-bureau-worker-drawing-sketches-office_1098-18821.jpg"
+              src="/images/architecture-bureau-worker-drawing-sketches-office_1098-18821.webp"
               alt="New Construction and Renovation Services — engineering design"
               width="700"
               height="420"
@@ -55,7 +55,7 @@ export default function Services() {
               <Link to="/request-service" className="btn btn-primary">Request Service</Link>
             </div>
             <img
-              src="/images/DSC_3475-G.jpg"
+              src="/images/DSC_3475-G.webp"
               alt="System Maintenance and Repairs — mechanical systems work"
               width="700"
               height="420"

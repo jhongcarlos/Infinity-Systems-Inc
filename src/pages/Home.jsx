@@ -2,28 +2,28 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const IMG = {
-  hero:          '/images/DSC_3500-G.jpg',
-  about1:        '/images/DSC_3362-G.jpg',
-  about2:        '/images/DSC_3433-G.jpg',
-  about3:        '/images/DSC_3522-G.jpg',
-  service1:      '/images/DSC_3364-G.jpg',
-  service2:      '/images/DSC_3475-G.jpg',
-  expertise:     '/images/costumer.png',
-  creativity:    '/images/creativity-1.png',
-  quality:       '/images/badge-1.png',
+  hero:          '/images/DSC_3500-G.webp',
+  about1:        '/images/DSC_3362-G.webp',
+  about2:        '/images/DSC_3433-G.webp',
+  about3:        '/images/DSC_3522-G.webp',
+  service1:      '/images/DSC_3364-G.webp',
+  service2:      '/images/DSC_3475-G.webp',
+  expertise:     '/images/costumer.webp',
+  creativity:    '/images/creativity-1.webp',
+  quality:       '/images/badge-1.webp',
 }
 
 const VALUES = [
-  { img: '/images/transparency.png', title: 'Transparency',  desc: 'Clear and open communication with our clients.' },
-  { img: '/images/honesty-1.png',        title: 'Integrity',     desc: 'Upholding the highest ethical standards in all that we do.' },
-  { img: '/images/secure-shield-1.png',  title: 'Reliability',   desc: 'Meeting deadlines & exceeding expectations with dependable service.' },
-  { img: '/images/collaborate.png',  title: 'Collaboration', desc: 'Working together to achieve project success.' },
+  { img: '/images/transparency.webp', title: 'Transparency',  desc: 'Clear and open communication with our clients.' },
+  { img: '/images/honesty-1.webp',        title: 'Integrity',     desc: 'Upholding the highest ethical standards in all that we do.' },
+  { img: '/images/secure-shield-1.webp',  title: 'Reliability',   desc: 'Meeting deadlines & exceeding expectations with dependable service.' },
+  { img: '/images/collaborate.webp',  title: 'Collaboration', desc: 'Working together to achieve project success.' },
 ]
 
 const FEATURES = [
-  { img: '/images/costumer.png', alt: 'Expertise', title: 'Expertise You Can Trust',  desc: 'Years of experience & technical proficiency in every project.' },
-  { img: '/images/creativity-1.png', alt: 'Solutions',  title: 'Customized Solutions',      desc: 'Tailored services to meet your unique project needs.' },
-  { img: '/images/badge-1.png',      alt: 'Quality',    title: 'Quality & Reliability',     desc: 'Commitment to excellence at every stage of your project.' },
+  { img: '/images/costumer.webp', alt: 'Expertise', title: 'Expertise You Can Trust',  desc: 'Years of experience & technical proficiency in every project.' },
+  { img: '/images/creativity-1.webp', alt: 'Solutions',  title: 'Customized Solutions',      desc: 'Tailored services to meet your unique project needs.' },
+  { img: '/images/badge-1.webp',      alt: 'Quality',    title: 'Quality & Reliability',     desc: 'Commitment to excellence at every stage of your project.' },
 ]
 
 export default function Home() {

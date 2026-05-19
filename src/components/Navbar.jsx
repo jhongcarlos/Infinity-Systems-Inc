@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
-const LOGO = '/images/default-90-1.png'
+const LOGO = '/images/default-90-1.webp'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
