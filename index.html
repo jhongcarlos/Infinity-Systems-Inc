@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="https://infinity-tx.com/wp-content/uploads/2025/01/favicon.png" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Infinity Systems Inc — Precision, Innovation, Reliability. Delivering cutting-edge mechanical contracting solutions across Texas. Serving Houston &amp; surrounding areas since 1991." />
     <meta name="theme-color" content="#902030" />
@@ -48,12 +48,8 @@
     <link rel="preload" as="font" type="font/woff2" href="/fonts/jost-latin.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/poppins-400.woff2" crossorigin />
 
-    <!-- Image CDN preconnect -->
-    <link rel="preconnect" href="https://www.infinity-tx.com" crossorigin />
-    <link rel="dns-prefetch" href="https://infinity-tx.com" />
-
-    <!-- Preload LCP hero image -->
-    <link rel="preload" as="image" href="https://www.infinity-tx.com/wp-content/uploads/2025/06/DSC_3500-G.jpg" fetchpriority="high" />
+    <!-- Preload LCP hero image — now served from Vercel edge -->
+    <link rel="preload" as="image" href="/images/DSC_3500-G.jpg" fetchpriority="high" />
   </head>
   <body>
     <div id="root"></div>

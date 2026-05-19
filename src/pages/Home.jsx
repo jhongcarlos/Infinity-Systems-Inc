@@ -2,28 +2,28 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const IMG = {
-  hero:          'https://www.infinity-tx.com/wp-content/uploads/2025/06/DSC_3500-G.jpg',
-  about1:        'https://www.infinity-tx.com/wp-content/uploads/2025/06/DSC_3362-G.jpg',
-  about2:        'https://www.infinity-tx.com/wp-content/uploads/2025/06/DSC_3433-G.jpg',
-  about3:        'https://www.infinity-tx.com/wp-content/uploads/2025/06/DSC_3522-G.jpg',
-  service1:      'https://www.infinity-tx.com/wp-content/uploads/2025/06/DSC_3364-G.jpg',
-  service2:      'https://www.infinity-tx.com/wp-content/uploads/2025/06/DSC_3475-G.jpg',
-  expertise:     'https://infinity-tx.com/wp-content/uploads/2026/05/costumer.png',
-  creativity:    'https://infinity-tx.com/wp-content/uploads/2025/01/creativity-1.png',
-  quality:       'https://infinity-tx.com/wp-content/uploads/2025/01/badge-1.png',
+  hero:          '/images/DSC_3500-G.jpg',
+  about1:        '/images/DSC_3362-G.jpg',
+  about2:        '/images/DSC_3433-G.jpg',
+  about3:        '/images/DSC_3522-G.jpg',
+  service1:      '/images/DSC_3364-G.jpg',
+  service2:      '/images/DSC_3475-G.jpg',
+  expertise:     '/images/costumer.png',
+  creativity:    '/images/creativity-1.png',
+  quality:       '/images/badge-1.png',
 }
 
 const VALUES = [
-  { img: 'https://www.infinity-tx.com/wp-content/uploads/2026/05/transparency.png', title: 'Transparency',  desc: 'Clear and open communication with our clients.' },
-  { img: 'https://infinity-tx.com/wp-content/uploads/2025/01/honesty-1.png',        title: 'Integrity',     desc: 'Upholding the highest ethical standards in all that we do.' },
-  { img: 'https://infinity-tx.com/wp-content/uploads/2025/01/secure-shield-1.png',  title: 'Reliability',   desc: 'Meeting deadlines & exceeding expectations with dependable service.' },
-  { img: 'https://www.infinity-tx.com/wp-content/uploads/2026/05/collaborate.png',  title: 'Collaboration', desc: 'Working together to achieve project success.' },
+  { img: '/images/transparency.png', title: 'Transparency',  desc: 'Clear and open communication with our clients.' },
+  { img: '/images/honesty-1.png',        title: 'Integrity',     desc: 'Upholding the highest ethical standards in all that we do.' },
+  { img: '/images/secure-shield-1.png',  title: 'Reliability',   desc: 'Meeting deadlines & exceeding expectations with dependable service.' },
+  { img: '/images/collaborate.png',  title: 'Collaboration', desc: 'Working together to achieve project success.' },
 ]
 
 const FEATURES = [
-  { img: 'https://www.infinity-tx.com/wp-content/uploads/2026/05/costumer.png', alt: 'Expertise', title: 'Expertise You Can Trust',  desc: 'Years of experience & technical proficiency in every project.' },
-  { img: 'https://infinity-tx.com/wp-content/uploads/2025/01/creativity-1.png', alt: 'Solutions',  title: 'Customized Solutions',      desc: 'Tailored services to meet your unique project needs.' },
-  { img: 'https://infinity-tx.com/wp-content/uploads/2025/01/badge-1.png',      alt: 'Quality',    title: 'Quality & Reliability',     desc: 'Commitment to excellence at every stage of your project.' },
+  { img: '/images/costumer.png', alt: 'Expertise', title: 'Expertise You Can Trust',  desc: 'Years of experience & technical proficiency in every project.' },
+  { img: '/images/creativity-1.png', alt: 'Solutions',  title: 'Customized Solutions',      desc: 'Tailored services to meet your unique project needs.' },
+  { img: '/images/badge-1.png',      alt: 'Quality',    title: 'Quality & Reliability',     desc: 'Commitment to excellence at every stage of your project.' },
 ]
 
 export default function Home() {
