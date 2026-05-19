@@ -856,18 +856,48 @@ p, li, label, input, textarea, select, button {
   transition: color 0.2s;
 }
 .contact-item-text a:hover { color: var(--primary); }
-.map-embed {
+.map-static {
+  display: flex;
+  align-items: center;
+  gap: 18px;
   margin-top: 32px;
+  padding: 20px 24px;
   border-radius: var(--radius);
-  overflow: hidden;
   border: 1px solid var(--gray-light);
-  line-height: 0;
+  background: var(--off-white);
+  color: var(--black);
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
 }
-.map-embed iframe {
-  display: block;
-  width: 100%;
-  height: 200px;
-  border: 0;
+.map-static:hover {
+  border-color: var(--primary);
+  background: #fdf5f6;
+}
+.map-static svg { color: var(--primary); flex-shrink: 0; }
+.map-static-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.map-static-text strong {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black);
+}
+.map-static-text span {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-light);
+}
+.map-static-cta {
+  font-family: var(--font-heading) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: var(--primary) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-top: 4px;
 }
 .form-card {
   background: var(--white);

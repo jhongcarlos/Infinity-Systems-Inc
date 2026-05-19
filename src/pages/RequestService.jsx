@@ -92,18 +92,20 @@ export default function RequestService() {
                 </div>
               </div>
 
-              <div className="map-embed">
-                <iframe
-                  title="Infinity Systems Inc location"
-                  src="https://maps.google.com/maps?q=12014+Windfern+Rd+Houston,+TX+77064+USA&z=15&output=embed"
-                  width="100%"
-                  height="280"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+              <a
+                href="https://maps.google.com/maps?q=12014+Windfern+Rd+Houston,+TX+77064+USA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="map-static"
+                aria-label="Open location in Google Maps"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="32" height="32" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div className="map-static-text">
+                  <strong>12014 Windfern Road</strong>
+                  <span>Houston, Texas 77064</span>
+                  <span className="map-static-cta">View on Google Maps →</span>
+                </div>
+              </a>
             </div>
 
             {/* Form column */}
