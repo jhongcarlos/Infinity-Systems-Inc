@@ -415,8 +415,8 @@ p, li, label, input, textarea, select, button {
 .about-img-row img {
   flex: 1;
   min-width: 0;
-  min-height: 0;
   width: 100%;
+  aspect-ratio: 290 / 200;
   object-fit: cover;
   border-radius: var(--radius);
 }
